@@ -64,7 +64,7 @@ router.get("/callback", (req, res) => {
           .catch((err) => {
             res.send("authorization failed: " + err);
           });
-      });
+      }).catch(error => console.log());
   } else {
     res.status(404);
   }
